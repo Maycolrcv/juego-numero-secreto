@@ -1,181 +1,111 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    color: white;
+    tamaño de caja : caja de borde;
+    margen :  0 ;
+    relleno :  0 ;
+    color : blanco;
 }
 
-body {
-    background: linear-gradient(#1354A5 0%, #041832 33.33%, #041832 66.67%, #01080E 100%);
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+cuerpo {
+    fondo :  gradiente lineal ( # 1354A5  0 % ,  # 041832  33,33 % ,  # 041832  66,67 % ,  # 01080E  100 % );
+    altura :  100 vh ;
+    pantalla : flexible;
+    alinear-elementos : centro;
+    justificar-contenido : centro;
 }
 
-body::before {
-    background-image: url("img/code.png");
-    background-repeat: no-repeat;
-    background-position: right;
-    content: "";
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
+
+cuerpo :: antes de {
+    imagen de fondo :  url ( "img/code.png" );
+    repetición de fondo : sin repetición;
+    posición de fondo : derecha;
+    contenido :  "" ;
+    pantalla : bloque;
+    posición : absoluta;
+    ancho :  100 % ;
+    altura :  100 % ;
+    opacidad :  0,4 ;
 }
 
-.container {
-    width: 1200px; /* Ancho por defecto */
-    height: 600px; /* Altura por defecto */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-radius: 24px;
-    border: 1px solid #1875E8;
-    box-shadow: 4px 4px 20px 0px rgba(1, 8, 14, 0.15);
-    background-image: url("img/Ruido.png");
-    background-size: 100% 100%;
-    position: relative;
+. contenedor {
+    ancho :  1200 px ;
+    altura :  600 px ;
+    pantalla : flexible;
+    alinear-elementos : centro;
+    justificar-contenido : espacio-entre;
+    radio del borde :  24 px ;
+    borde :  1 px sólido # 1875E8 ;
+    caja-sombra :  4 px  4 px  20 px  0 px  rgba ( 1 ,  8 ,  14 ,  0.15 );
+    imagen de fondo :  url ( "img/Ruido.png" );
+    tamaño de fondo :  100 %  100 % ;
+    posición : relativa;
 }
 
-.container__contenido {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
+
+. contenedor__contenido {
+    pantalla : flexible;
+    alinear-elementos : centro;
+    posición : absoluta;
+    abajo :  0 ;
 }
 
-.container__informaciones {
-    flex: 1;
-    padding: 3rem;
+. contenedor__informaciones {
+    flexionar :  1 ;
+    relleno :  3 rem ;
 }
 
-.container__boton {
-    border-radius: 16px;
-    background: #1875E8;
-    padding: 16px 24px;
-    width: 100%;
-    font-size: 24px;
-    font-weight: 700;
-    border: none;
-    margin-top: 2rem;
+. contenedor__boton {
+    radio del borde :  16 px ;
+    fondo :  # 1875E8 ;
+    relleno :  16 px  24 px ;
+    ancho :  100 % ;
+    tamaño de fuente :  24 px ;
+    peso de la fuente :  700 ;
+    borde : ninguno;
+    margen superior :  2 rem ;
 }
 
-.container__boton:disabled {
-    background: #898989;
+.container__boton : deshabilitado {​
+    fondo :  # 898989 ;
 }
 
-.container__texto {
-    margin: 16px 0;
+. contenedor__texto {
+    margen :  16 px  0  16 px  0 ;
 }
 
-.container__texto-azul {
-    color: #1875E8;
+. contenedor__texto-azul {
+    color :  # 1875E8 ;
 }
 
-.container__input {
-    width: 100%;
-    height: 72px;
-    border-radius: 16px;
-    background-color: #FFF;
-    border: none;
-    color: #1875E8;
-    padding: 2rem;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
+.contenedor__input {​
+    ancho :  100 % ;
+    altura :  72 px ;
+    radio del borde :  16 px ;
+    color de fondo :  # FFF ;
+    borde : ninguno;
+    color :  # 1875E8 ;
+    relleno :  2 rem ;
+    tamaño de fuente :  24 px ;
+    peso de la fuente :  700 ;
+    familia de fuentes :  'Inter' , sans-serif;
 }
 
-.container__botones {
-    display: flex;
-    gap: 2em;
+.contenedor__botones {​
+    pantalla : flexible;
+    brecha :  2 em ;
 }
 
 h1 {
-    font-family: 'Chakra Petch', sans-serif;
-    font-size: 72px;
-    padding-bottom: 3rem;
+    familia de fuentes :  'Chakra Petch' , sans-serif;
+    tamaño de fuente :  72 px ;
+    relleno inferior :  3 rem ;
 }
 
-p,
-button {
-    font-family: 'Inter', sans-serif;
+pag ,
+botón {
+    familia de fuentes :  'Inter' , sans-serif;
 }
 
-.texto__parrafo {
-    font-size: 32px;
-    font-weight: 400;
-}
-
-/* Media Query para pantallas menores de 1200px */
-@media (max-width: 1200px) {
-    .container {
-        width: 90%; /* Ajusta el ancho en pantallas menores */
-        height: auto; /* Altura automática para mantener proporciones */
-        flex-direction: column; /* Cambia a columna para pantallas más pequeñas */
-    }
-
-    .container__contenido {
-        position: static; /* Cambia la posición en pantallas más pequeñas */
-        flex-direction: column; /* Cambia a columna */
-        align-items: center; /* Centra los elementos */
-    }
-
-    .container__informaciones {
-        padding: 2rem; /* Ajusta el padding en pantallas más pequeñas */
-    }
-
-    .container__boton {
-        padding: 12px 20px; /* Ajusta el padding */
-        font-size: 20px; /* Ajusta el tamaño de fuente */
-        margin-top: 1rem; /* Ajusta el margen superior */
-    }
-
-    .container__input {
-        height: 60px; /* Ajusta la altura */
-        padding: 1.5rem; /* Ajusta el padding */
-        font-size: 20px; /* Ajusta el tamaño de fuente */
-    }
-
-    .container__botones {
-        flex-direction: column; /* Cambia a columna para pantallas más pequeñas */
-        gap: 1em; /* Ajusta el espacio entre botones */
-    }
-
-    h1 {
-        font-size: 48px; /* Ajusta el tamaño de fuente */
-        padding-bottom: 2rem; /* Ajusta el padding inferior */
-    }
-
-    .texto__parrafo {
-        font-size: 24px; /* Ajusta el tamaño de fuente */
-    }
-}
-
-/* Media Query para pantallas menores de 768px */
-@media (max-width: 768px) {
-    .container__informaciones {
-        padding: 1rem; /* Reduce padding en pantallas más pequeñas */
-    }
-
-    .container__boton {
-        padding: 10px 16px; /* Ajusta el padding */
-        font-size: 18px; /* Ajusta el tamaño de fuente */
-    }
-
-    .container__input {
-        height: 50px; /* Ajusta la altura */
-        padding: 1rem; /* Ajusta el padding */
-        font-size: 18px; /* Ajusta el tamaño de fuente */
-    }
-
-    h1 {
-        font-size: 36px; /* Ajusta el tamaño de fuente */
-        padding-bottom: 1rem; /* Reduce el padding inferior */
-    }
-
-    .texto__parrafo {
-        font-size: 20px; /* Ajusta el tamaño de fuente */
-    }
+.texto__parrafo {​
+    tamaño de fuente :  32 px ;
+    peso de la fuente :  400 ;
 }
